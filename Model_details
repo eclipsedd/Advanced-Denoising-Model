@@ -1,0 +1,100 @@
+Foundation model (model_0)
+“model_0.py” presents the backbone of all models. Subsequent models can be described as refinements aimed at achieving superior image resolution and a considerable Peak Signal-to-Noise Ratio (PSNR) score.
+The model follows an encoder-decoder network structure that employs skip connections to facilitate feature integration across different scales [1]. This technique is prevalent in deep learning architectures for preserving spatial information and enhancing network performance.
+
+The detailed architecture of the basic model is as follows:
+1. Input Layer: Defines the shape of the input image with dimensions 400x600 pixels and 3 color channels (RGB).
+-	Layer Type: Input
+-	Parameters: input_shape (400, 600, 3)
+
+2. Encoder: Comprises two convolutional blocks, each followed by batch normalization, ReLU activation, and dropout layers.
+-	Block 1: Applies 64 convolution filters to the input image, maintaining the spatial dimensions due to "same" padding.
+o	Conv2D Layer 1 {Filters: 64; Kernel Size: (3, 3); Kernel Regularizer: L2 (0.001)}
+o	Batch Normalization Layer 1: Normalizes the output of the convolutional layer to accelerate training and improve stability.
+o	ReLU Layer 1: Applies the ReLU activation function to introduce non-linearity
+o	Dropout Layer 1: Randomly drops 30% of the units to prevent overfitting.
+
+-	Block 2: Similar to Block 1, but with 128 convolution filters.
+
+3. Decoder: Mirrors the encoder with two convolutional blocks, each followed by batch normalization, ReLU activation, and a final convolutional layer to reconstruct the enhanced image.
+-	Block 3: Same as Block 2.
+-	Block 4: Same as Block 1.
+-	Block 5: Applies 3 convolution filters to match the original number of color channels in the input image, maintaining the spatial dimensions.
+o	Conv2D Layer 5 {Filters: 3; Kernel Size: (3, 3); Padding: same; Kernel Regularizer: L2 (0.001)}
+4. Skip Connection: Adds the input image to the output of the final convolutional layer to create a skip connection, allowing the model to learn residual enhancements over the original image.
+
+Purpose of Skip Connection: 
+This concept, popularized by the ResNet (Residual Networks) architecture, aims to enable the network to learn residual mappings instead of direct mappings. Mathematically, Output = Input + Learned Residual. 
+In this model, the skip connection is applied at the end rather than at an intermediate step. Adding the input to the final output helps the model focus on learning residuals, i.e., the differences between the input and the desired output after model processing. This approach simplifies the learning task, as the network only needs to learn the modifications required to enhance the image, rather than learning the entire mapping from scratch.
+
+5. Model Compilation: The model is compiled with the Adam optimizer and the Mean Squared Error (MSE) loss function to minimize the difference between the enhanced image and the original input image. 
+
+However, due to the model's heavy parameterization, it was not feasible to build it on a local machine. This foundational model, although computationally intensive, serves as a crucial step towards developing more efficient and effective image enhancement architectures.
+
+model_1 (First model to be built)
+In this model implementation, filter sizes were reduced from 128 and 64 to 64 and 32, respectively. This adjustment resulted in more optimized RAM utilization, making it feasible to build the model on a local machine. The model was constructed using `train.py`, and thus, no performance parameters could be calculated.
+
+model_2
+PSNR: 17.2855; val_ PSNR: 15.3329
+The drawback of fewer filters faced by model_1, which led to reduced overall performance, could be addressed by introducing a dilated convolutional layer. One of the main benefits of dilated convolutions is their ability to increase the receptive field exponentially (extrapolating using null pixels) without reducing the spatial resolution of the image. This allows the network to capture larger contextual information from the input image while maintaining fine-grained details [2]. 
+Additionally, for the sake of simplicity and computational efficiency, dropout layers were omitted in this implementation. Instead, the model now relies on batch normalization and L2 regularization to prevent overfitting and ensure regularization.
+This model also applies a sigmoid activation function at the output, ensuring that the final pixel values are constrained between 0 and 1, which is suitable for image data. In contrast, model_1 did not employ an explicit activation function at the output, potentially allowing pixel values to fall outside the usual 0-1 range. The use of a sigmoid activation function at the output has been adopted by SVNIT NTNU [1, 4.20] and yanhailong [1, 4.21], as it helps obtain definite pixel values, thereby enabling better illumination through the use of advanced architecture thereafter.
+
+model_3
+PSNR: 13.4651; val_ PSNR: 13.7537
+By the time model_2 was constructed on the local machine, it became apparent that the local machine lacked the requisite computational power to implement a more complex model. The construction of model_2 took approximately 10 hours.
+Model_3, therefore, represents the Google Collaboratory implementation of model_2, utilizing its GPUs to accelerate computation. Consequently, the resulting model performance parameters differed from those of model_2 due to the use of a different version of TensorFlow.
+Local Machine - 2.16.1
+Google Collaboratory - 2.15.0 {previous stable default version}
+
+model_4
+PSNR: 27.6378
+The subsequent optimization focused on the model's learning rate to enhance its versatility. Instead of employing the standard Adam optimizer with a fixed learning rate, a custom exponential decay learning rate schedule was implemented. This method starts with a higher learning rate and gradually decreases it, allowing the model to make significant updates initially and smaller, more refined updates as training progresses.
+
+During the initial attempts, RAM over-utilization was encountered. To mitigate this issue, an image data generator was deployed, enabling the model to sample the training dataset in batches rather than loading the entire dataset at the beginning.
+
+model_5
+PSNR: 25.8999
+With increased computational power at our disposal, a significant improvement in image optimization could be achieved by adjusting the batch size and the number of epochs. Consequently, the batch size was reduced to 8, allowing for more detailed updates per iteration. Additionally, the total number of epochs was increased to 60, providing the model with more opportunities to learn and refine its parameters over an extended training period.
+
+model_6
+PSNR: 27.7540; val_ PSNR: 23.3042
+This iteration represents the Google Collaboratory implementation of model_4, utilizing the latest versions of TensorFlow (2.16.1) and Keras (3.3.3). This update was necessary to ensure compatibility between the online-built model and the local machine, which also employs the latest versions of TensorFlow and Keras.
+The latest version of TensorFlow demonstrated inconsistencies with the code of model_4, particularly with the Image Data Generator, which failed to provide sufficient training data. To address this, the “.repeat()” method was added to ensure the dataset's availability for the specified number of training epochs. Additionally, the “.shuffle()” method was employed to avoid feeding the same data in the same order during each epoch.
+A validation split of 0.1 was set to evaluate how the model responded to an unseen dataset.
+
+model_7
+PSNR: 26.0036; val_ PSNR: 21.6197
+An enhanced implementation of model_6 involves halving the batch size and consequently doubling the number of epochs. This adjustment allows for more frequent updates to the model's parameters during training, potentially leading to improved performance and finer parameter tuning over an extended training duration.
+
+
+model_8
+PSNR: 28.9883; val_ PSNR: 30.2629
+This implementation avoids using methods “.repeat” and “.shuffle,” as they lack extensive research support. Instead, the number of epochs is dynamically calculated. Consequently, the sole user-input parameter for constructing the model is the batch size, which is set to 16 in this iteration. This approach aims to streamline the training process while ensuring optimal performance without relying on potentially unsupported methods.
+
+model_9
+PSNR: 26.8522; val_ PSNR: 22.4229
+Implementation of model_8 but with a smaller batch size of 8 and corresponding number of epochs. 
+
+model_10
+PSNR: 29.3841; val_ PSNR: 29.2494
+Until now, the full potential of skip connections as detailed earlier had not been fully utilized. Therefore, a skip connection is now introduced between layers relu2 and relu4, enabling the model to learn direct mapping.
+This enhancement draws inspiration from architectures like ResNet, which utilize skip connections to link intermediate layers directly to subsequent layers [4]. The benefits of this addition include:
+i) Improved Gradient Flow: Intermediate skip connections facilitate smoother gradient propagation during backpropagation, thereby enhancing training efficiency and addressing potential issues with vanishing gradients.
+ii) Accelerated Training and Enhanced Convergence: By establishing these connections, training speed can be increased and convergence to optimal solutions can be improved.
+
+This improvement leverages the proven benefits of skip connections in deep learning architectures, aiming to optimize model performance and training dynamics effectively.
+
+model_11
+The intention was to implement model_10 with an increased number of filters. However, the computational demands were exceptionally high, even for the GPUs available on Google Collaboratory. As a result, the construction of this model was ultimately deferred.
+
+CONCLUSION
+Given the consistent achievement of the highest PSNR score during training and its ability to maintain a stable and competitive PSNR score during validation, model_10 has emerged as the preferred choice. The efficient utilization of skip connections contributed to a relatively streamlined model construction process, leveraging the substantial computational power provided by GPUs.
+Hence, model_10 has been designated as the final model due to its superior performance metrics and the strategic implementation of skip connections to enhance overall efficacy in image enhancement tasks.
+
+
+REFERENCES:
+[1] NTIRE 2024 Challenge on Low Light Image Enhancement : Methods and Results 2404.14248 (arxiv.org)
+[2] Towards efficient and scale-robust ultra high-definition image demoir´eing, Xin Yu et al. European Conference on Computer Vision, pages 646–662. Springer, 2022. 
+[3] https://stackoverflow.com/questions/39517431/should-we-do-learning-rate-decay-for-adam-optimizer
+[4] https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-ipr.2019.0623
