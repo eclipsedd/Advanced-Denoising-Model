@@ -23,8 +23,8 @@ def psnr(y_true, y_pred):
 if __name__ == "__main__":
     mymodel = tf.keras.models.load_model(
         "FINAL_low_light_enhancement_model10(colab).keras",
-        custom_objects={"mse": losses.MeanSquaredError()},
-        # custom_objects={"psnr": psnr},
+        #custom_objects={"mse": losses.MeanSquaredError()},
+        custom_objects={"psnr": psnr},
     )
     print("Model loaded.")
 
