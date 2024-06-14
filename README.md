@@ -49,7 +49,6 @@ model_2
 PSNR: 17.2855; val_ PSNR: 15.3329
 The drawback of fewer filters faced by model_1, which led to reduced overall performance, could be addressed by introducing a dilated convolutional layer. One of the main benefits of dilated convolutions is their ability to increase the receptive field exponentially (extrapolating using null pixels) without reducing the spatial resolution of the image. This allows the network to capture larger contextual information from the input image while maintaining fine-grained details [2]. 
 Additionally, for the sake of simplicity and computational efficiency, dropout layers were omitted in this implementation. Instead, the model now relies on batch normalization and L2 regularization to prevent overfitting and ensure regularization.
-Fig 1. Inspiration for a dilated convolution layer        				Source: [2] 
 This model also applies a sigmoid activation function at the output, ensuring that the final pixel values are constrained between 0 and 1, which is suitable for image data. In contrast, model_1 did not employ an explicit activation function at the output, potentially allowing pixel values to fall outside the usual 0-1 range. The use of a sigmoid activation function at the output has been adopted by SVNIT NTNU [1, 4.20] and yanhailong [1, 4.21], as it helps obtain definite pixel values, thereby enabling better illumination through the use of advanced architecture thereafter.
 
 model_3
