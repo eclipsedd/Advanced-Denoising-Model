@@ -1,0 +1,86 @@
+Found 874 images belonging to 3 classes.
+Found 96 images belonging to 3 classes.
+Epoch 1/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 0s 4s/step - loss: 0.2321 - mae: 0.1216 - mse: 0.0301 - psnr: 19.5899/usr/local/lib/python3.10/dist-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+55/55 ━━━━━━━━━━━━━━━━━━━━ 294s 4s/step - loss: 0.2313 - mae: 0.1207 - mse: 0.0297 - psnr: 19.6625 - val_loss: 0.1956 - val_mae: 0.2452 - val_mse: 0.0793 - val_psnr: 12.7623
+Epoch 2/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 52s 946ms/step - loss: 0.0984 - mae: 0.0326 - mse: 0.0022 - psnr: 28.3728 - val_loss: 0.0976 - val_mae: 0.1967 - val_mse: 0.0462 - val_psnr: 13.6461
+Epoch 3/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 53s 957ms/step - loss: 0.0454 - mae: 0.0325 - mse: 0.0020 - psnr: 28.5259 - val_loss: 0.0754 - val_mae: 0.1960 - val_mse: 0.0497 - val_psnr: 13.7744
+Epoch 4/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 980ms/step - loss: 0.0249 - mae: 0.0352 - mse: 0.0023 - psnr: 28.2599 - val_loss: 0.0695 - val_mae: 0.1950 - val_mse: 0.0535 - val_psnr: 14.0487
+Epoch 5/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 55s 993ms/step - loss: 0.0165 - mae: 0.0329 - mse: 0.0020 - psnr: 28.4138 - val_loss: 0.0516 - val_mae: 0.1718 - val_mse: 0.0407 - val_psnr: 15.1286
+Epoch 6/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 984ms/step - loss: 0.0135 - mae: 0.0430 - mse: 0.0033 - psnr: 26.5257 - val_loss: 0.0421 - val_mae: 0.1684 - val_mse: 0.0337 - val_psnr: 14.9698
+Epoch 7/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 980ms/step - loss: 0.0103 - mae: 0.0358 - mse: 0.0024 - psnr: 27.6824 - val_loss: 0.0297 - val_mae: 0.1391 - val_mse: 0.0230 - val_psnr: 16.6248
+Epoch 8/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 55s 996ms/step - loss: 0.0087 - mae: 0.0336 - mse: 0.0022 - psnr: 28.2477 - val_loss: 0.0362 - val_mae: 0.1597 - val_mse: 0.0305 - val_psnr: 15.4058
+Epoch 9/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 55s 1s/step - loss: 0.0081 - mae: 0.0363 - mse: 0.0024 - psnr: 27.6003 - val_loss: 0.0116 - val_mae: 0.0541 - val_mse: 0.0064 - val_psnr: 25.2445
+Epoch 10/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 987ms/step - loss: 0.0070 - mae: 0.0331 - mse: 0.0021 - psnr: 28.5523 - val_loss: 0.0656 - val_mae: 0.1815 - val_mse: 0.0604 - val_psnr: 16.9773
+Epoch 11/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 987ms/step - loss: 0.0079 - mae: 0.0384 - mse: 0.0028 - psnr: 27.2348 - val_loss: 0.0109 - val_mae: 0.0711 - val_mse: 0.0066 - val_psnr: 22.0280
+Epoch 12/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 991ms/step - loss: 0.0066 - mae: 0.0370 - mse: 0.0025 - psnr: 27.7004 - val_loss: 0.0074 - val_mae: 0.0468 - val_mse: 0.0037 - val_psnr: 25.7898
+Epoch 13/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 57s 1s/step - loss: 0.0075 - mae: 0.0419 - mse: 0.0037 - psnr: 27.2222 - val_loss: 0.0132 - val_mae: 0.0832 - val_mse: 0.0098 - val_psnr: 20.6419
+Epoch 14/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 55s 1s/step - loss: 0.0062 - mae: 0.0368 - mse: 0.0028 - psnr: 27.8420 - val_loss: 0.0061 - val_mae: 0.0342 - val_mse: 0.0026 - val_psnr: 28.2801
+Epoch 15/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 990ms/step - loss: 0.0066 - mae: 0.0414 - mse: 0.0031 - psnr: 26.8179 - val_loss: 0.0074 - val_mae: 0.0537 - val_mse: 0.0043 - val_psnr: 24.4862
+Epoch 16/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 986ms/step - loss: 0.0059 - mae: 0.0391 - mse: 0.0029 - psnr: 27.2240 - val_loss: 0.0081 - val_mae: 0.0581 - val_mse: 0.0053 - val_psnr: 23.9148
+Epoch 17/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 984ms/step - loss: 0.0049 - mae: 0.0340 - mse: 0.0022 - psnr: 28.2951 - val_loss: 0.0046 - val_mae: 0.0319 - val_mse: 0.0021 - val_psnr: 28.5462
+Epoch 18/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 57s 1s/step - loss: 0.0057 - mae: 0.0415 - mse: 0.0031 - psnr: 26.8792 - val_loss: 0.0089 - val_mae: 0.0577 - val_mse: 0.0056 - val_psnr: 23.8837
+Epoch 19/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 55s 1s/step - loss: 0.0062 - mae: 0.0372 - mse: 0.0027 - psnr: 27.4957 - val_loss: 0.0065 - val_mae: 0.0449 - val_mse: 0.0036 - val_psnr: 26.2867
+Epoch 20/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 983ms/step - loss: 0.0055 - mae: 0.0381 - mse: 0.0027 - psnr: 27.2303 - val_loss: 0.0080 - val_mae: 0.0548 - val_mse: 0.0053 - val_psnr: 25.4260
+Epoch 21/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 986ms/step - loss: 0.0048 - mae: 0.0339 - mse: 0.0022 - psnr: 28.1232 - val_loss: 0.0169 - val_mae: 0.1087 - val_mse: 0.0147 - val_psnr: 19.2280
+Epoch 22/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 984ms/step - loss: 0.0047 - mae: 0.0348 - mse: 0.0024 - psnr: 28.2212 - val_loss: 0.0062 - val_mae: 0.0484 - val_mse: 0.0038 - val_psnr: 25.3052
+Epoch 23/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 55s 997ms/step - loss: 0.0049 - mae: 0.0367 - mse: 0.0025 - psnr: 27.8706 - val_loss: 0.0077 - val_mae: 0.0642 - val_mse: 0.0054 - val_psnr: 22.9442
+Epoch 24/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 55s 993ms/step - loss: 0.0050 - mae: 0.0385 - mse: 0.0027 - psnr: 27.4335 - val_loss: 0.0112 - val_mae: 0.0817 - val_mse: 0.0089 - val_psnr: 20.9620
+Epoch 25/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 54s 981ms/step - loss: 0.0041 - mae: 0.0312 - mse: 0.0019 - psnr: 28.7140 - val_loss: 0.0113 - val_mae: 0.0786 - val_mse: 0.0093 - val_psnr: 22.5460
+Epoch 26/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 57s 1s/step - loss: 0.0043 - mae: 0.0358 - mse: 0.0024 - psnr: 27.8411 - val_loss: 0.0084 - val_mae: 0.0727 - val_mse: 0.0066 - val_psnr: 22.0459
+Epoch 27/27
+55/55 ━━━━━━━━━━━━━━━━━━━━ 56s 1s/step - loss: 0.0038 - mae: 0.0320 - mse: 0.0020 - psnr: 28.9883 - val_loss: 0.0031 - val_mae: 0.0254 - val_mse: 0.0013 - val_psnr: 30.2629
+Validation Metrics per Epoch:
+Epoch 1: Loss - 0.1956, MSE - 0.0793, MAE - 0.2452, PSNR - 12.7623
+Epoch 2: Loss - 0.0976, MSE - 0.0462, MAE - 0.1967, PSNR - 13.6461
+Epoch 3: Loss - 0.0754, MSE - 0.0497, MAE - 0.1960, PSNR - 13.7744
+Epoch 4: Loss - 0.0695, MSE - 0.0535, MAE - 0.1950, PSNR - 14.0487
+Epoch 5: Loss - 0.0516, MSE - 0.0407, MAE - 0.1718, PSNR - 15.1286
+Epoch 6: Loss - 0.0421, MSE - 0.0337, MAE - 0.1684, PSNR - 14.9698
+Epoch 7: Loss - 0.0297, MSE - 0.0230, MAE - 0.1391, PSNR - 16.6248
+Epoch 8: Loss - 0.0362, MSE - 0.0305, MAE - 0.1597, PSNR - 15.4058
+Epoch 9: Loss - 0.0116, MSE - 0.0064, MAE - 0.0541, PSNR - 25.2445
+Epoch 10: Loss - 0.0656, MSE - 0.0604, MAE - 0.1815, PSNR - 16.9773
+Epoch 11: Loss - 0.0109, MSE - 0.0066, MAE - 0.0711, PSNR - 22.0280
+Epoch 12: Loss - 0.0074, MSE - 0.0037, MAE - 0.0468, PSNR - 25.7898
+Epoch 13: Loss - 0.0132, MSE - 0.0098, MAE - 0.0832, PSNR - 20.6419
+Epoch 14: Loss - 0.0061, MSE - 0.0026, MAE - 0.0342, PSNR - 28.2801
+Epoch 15: Loss - 0.0074, MSE - 0.0043, MAE - 0.0537, PSNR - 24.4862
+Epoch 16: Loss - 0.0081, MSE - 0.0053, MAE - 0.0581, PSNR - 23.9148
+Epoch 17: Loss - 0.0046, MSE - 0.0021, MAE - 0.0319, PSNR - 28.5462
+Epoch 18: Loss - 0.0089, MSE - 0.0056, MAE - 0.0577, PSNR - 23.8837
+Epoch 19: Loss - 0.0065, MSE - 0.0036, MAE - 0.0449, PSNR - 26.2867
+Epoch 20: Loss - 0.0080, MSE - 0.0053, MAE - 0.0548, PSNR - 25.4260
+Epoch 21: Loss - 0.0169, MSE - 0.0147, MAE - 0.1087, PSNR - 19.2280
+Epoch 22: Loss - 0.0062, MSE - 0.0038, MAE - 0.0484, PSNR - 25.3052
+Epoch 23: Loss - 0.0077, MSE - 0.0054, MAE - 0.0642, PSNR - 22.9442
+Epoch 24: Loss - 0.0112, MSE - 0.0089, MAE - 0.0817, PSNR - 20.9620
+Epoch 25: Loss - 0.0113, MSE - 0.0093, MAE - 0.0786, PSNR - 22.5460
+Epoch 26: Loss - 0.0084, MSE - 0.0066, MAE - 0.0727, PSNR - 22.0459
+Epoch 27: Loss - 0.0031, MSE - 0.0013, MAE - 0.0254, PSNR - 30.2629

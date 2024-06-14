@@ -1,0 +1,60 @@
+MODEL_2 STATISTICS
+
+Epoch 1/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1275s 48s/step - loss: 0.2521 - mae: 0.1526 - mse: 0.0385 - psnr: 15.4789 - val_loss: 0.2216 - val_mae: 0.1912 - val_mse: 0.0498 - val_psnr: 13.3108
+Epoch 2/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 921s 35s/step - loss: 0.1832 - mae: 0.1279 - mse: 0.0256 - psnr: 17.3264 - val_loss: 0.1660 - val_mae: 0.1869 - val_mse: 0.0477 - val_psnr: 13.4870
+Epoch 3/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1052s 42s/step - loss: 0.1314 - mae: 0.1221 - mse: 0.0233 - psnr: 17.6251 - val_loss: 0.1288 - val_mae: 0.1866 - val_mse: 0.0477 - val_psnr: 13.4854
+Epoch 4/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1162s 46s/step - loss: 0.0989 - mae: 0.1246 - mse: 0.0244 - psnr: 17.4644 - val_loss: 0.1071 - val_mae: 0.1913 - val_mse: 0.0499 - val_psnr: 13.2940
+Epoch 5/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1184s 44s/step - loss: 0.0750 - mae: 0.1187 - mse: 0.0222 - psnr: 17.8735 - val_loss: 0.0884 - val_mae: 0.1842 - val_mse: 0.0468 - val_psnr: 13.5671
+Epoch 6/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1190s 45s/step - loss: 0.0620 - mae: 0.1211 - mse: 0.0231 - psnr: 17.6677 - val_loss: 0.0799 - val_mae: 0.1875 - val_mse: 0.0482 - val_psnr: 13.4338
+Epoch 7/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 2439s 97s/step - loss: 0.0540 - mae: 0.1242 - mse: 0.0242 - psnr: 17.4767 - val_loss: 0.0770 - val_mae: 0.1958 - val_mse: 0.0523 - val_psnr: 13.0934
+Epoch 8/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 2466s 100s/step - loss: 0.0458 - mae: 0.1194 - mse: 0.0224 - psnr: 17.7904 - val_loss: 0.0682 - val_mae: 0.1873 - val_mse: 0.0483 - val_psnr: 13.4334
+Epoch 9/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1491s 61s/step - loss: 0.0442 - mae: 0.1263 - mse: 0.0250 - psnr: 17.3839 - val_loss: 0.0711 - val_mae: 0.1998 - val_mse: 0.0542 - val_psnr: 12.9416
+Epoch 10/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1264s 50s/step - loss: 0.0396 - mae: 0.1209 - mse: 0.0233 - psnr: 17.7250 - val_loss: 0.0672 - val_mae: 0.1973 - val_mse: 0.0528 - val_psnr: 13.0540
+Epoch 11/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1454s 57s/step - loss: 0.0374 - mae: 0.1215 - mse: 0.0235 - psnr: 17.6419 - val_loss: 0.0688 - val_mae: 0.2039 - val_mse: 0.0559 - val_psnr: 12.8268
+Epoch 12/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1242s 48s/step - loss: 0.0379 - mae: 0.1280 - mse: 0.0253 - psnr: 16.9869 - val_loss: 0.0698 - val_mae: 0.2091 - val_mse: 0.0584 - val_psnr: 12.6623
+Epoch 13/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1728s 67s/step - loss: 0.0344 - mae: 0.1223 - mse: 0.0233 - psnr: 17.5356 - val_loss: 0.0702 - val_mae: 0.2122 - val_mse: 0.0599 - val_psnr: 12.5761
+Epoch 14/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 882s 35s/step - loss: 0.0356 - mae: 0.1277 - mse: 0.0255 - psnr: 17.2036 - val_loss: 0.0685 - val_mae: 0.2108 - val_mse: 0.0590 - val_psnr: 12.6274
+Epoch 15/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 985s 39s/step - loss: 0.0339 - mae: 0.1259 - mse: 0.0247 - psnr: 17.3824 - val_loss: 0.0666 - val_mae: 0.2093 - val_mse: 0.0581 - val_psnr: 12.7008
+Epoch 16/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 903s 35s/step - loss: 0.0309 - mae: 0.1195 - mse: 0.0226 - psnr: 17.6805 - val_loss: 0.0567 - val_mae: 0.1899 - val_mse: 0.0489 - val_psnr: 13.3872
+Epoch 17/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 862s 33s/step - loss: 0.0317 - mae: 0.1259 - mse: 0.0239 - psnr: 17.0896 - val_loss: 0.0525 - val_mae: 0.1819 - val_mse: 0.0450 - val_psnr: 13.7756
+Epoch 18/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 973s 38s/step - loss: 0.0327 - mae: 0.1277 - mse: 0.0253 - psnr: 17.1524 - val_loss: 0.0571 - val_mae: 0.1930 - val_mse: 0.0501 - val_psnr: 13.3392
+Epoch 19/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 817s 30s/step - loss: 0.0310 - mae: 0.1224 - mse: 0.0242 - psnr: 17.6124 - val_loss: 0.0572 - val_mae: 0.1939 - val_mse: 0.0507 - val_psnr: 13.2508
+Epoch 20/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1106s 43s/step - loss: 0.0294 - mae: 0.1208 - mse: 0.0229 - psnr: 17.5967 - val_loss: 0.0640 - val_mae: 0.2084 - val_mse: 0.0575 - val_psnr: 12.7376
+Epoch 21/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 984s 37s/step - loss: 0.0292 - mae: 0.1197 - mse: 0.0228 - psnr: 17.7157 - val_loss: 0.0612 - val_mae: 0.2029 - val_mse: 0.0551 - val_psnr: 12.9343
+Epoch 22/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1155s 46s/step - loss: 0.0297 - mae: 0.1239 - mse: 0.0238 - psnr: 17.5524 - val_loss: 0.0469 - val_mae: 0.1738 - val_mse: 0.0413 - val_psnr: 14.1354
+Epoch 23/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1157s 45s/step - loss: 0.0287 - mae: 0.1203 - mse: 0.0232 - psnr: 17.8466 - val_loss: 0.0449 - val_mae: 0.1692 - val_mse: 0.0395 - val_psnr: 14.3366
+Epoch 24/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1414s 55s/step - loss: 0.0282 - mae: 0.1192 - mse: 0.0227 - psnr: 17.7576 - val_loss: 0.0462 - val_mae: 0.1733 - val_mse: 0.0410 - val_psnr: 14.1729
+Epoch 25/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1439s 55s/step - loss: 0.0288 - mae: 0.1236 - mse: 0.0236 - psnr: 17.6647 - val_loss: 0.0292 - val_mae: 0.1283 - val_mse: 0.0240 - val_psnr: 17.0748
+Epoch 26/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 820s 33s/step - loss: 0.0290 - mae: 0.1220 - mse: 0.0236 - psnr: 17.8013 - val_loss: 0.0391 - val_mae: 0.1554 - val_mse: 0.0340 - val_psnr: 15.0522
+Epoch 28/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1006s 40s/step - loss: 0.0302 - mae: 0.1265 - mse: 0.0253 - psnr: 17.4325 - val_loss: 0.0282 - val_mae: 0.1237 - val_mse: 0.0236 - val_psnr: 17.1584
+Epoch 29/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1425s 57s/step - loss: 0.0292 - mae: 0.1235 - mse: 0.0247 - psnr: 17.6239 - val_loss: 0.0398 - val_mae: 0.1544 - val_mse: 0.0354 - val_psnr: 14.8667
+Epoch 30/30
+25/25 ━━━━━━━━━━━━━━━━━━━━ 1070s 43s/step - loss: 0.0292 - mae: 0.1260 - mse: 0.0248 - psnr: 17.2855 - val_loss: 0.0375 - val_mae: 0.1490 - val_mse: 0.0330 - val_psnr: 15.3329
